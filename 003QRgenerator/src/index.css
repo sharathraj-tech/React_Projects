@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,::after,::before{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+label{
+    font-weight:600;
+    margin-right: 2px;
+    color: rgb(41, 39, 39);
+}
