@@ -17,7 +17,8 @@ function App() {
             <h1 className='text-center font-semibold text-2xl font-serif text-gray-800 decoration-2 decoration-wavy underline underline-offset-8 decoration-orange-500'>QR Code Generator</h1>
             <input type=""  
             placeholder='Enter data'
-            className='w-full border-b-2  focus:outline-none h-26 mt-10'
+            className='w-full border-b-2  focus:outline-none h-26 mt-10 
+            focus:border-orange-500 focus:delay-75 focus:animate-pulse'
             value={data}
             onChange={(e)=>{setData(e.target.value)}}
             
@@ -27,11 +28,11 @@ function App() {
                 <label htmlFor="" className='mr-2'>Size</label>
                 <input 
                 type="number" 
-                className='focus:outline-none border border-gray-500 w-25 rounded-lg p-1 mr-2 w-20' 
+                className='focus:outline-none border border-gray-500 focus:border-orange-500 w-25 rounded-lg p-1 mr-2 w-20 ' 
                 value={size}
                 onChange={(e)=>{setSize(e.target.value)}}
                 />
-                <span className='text-xs font-thin'>[200px X 200px]</span>
+                <span className='text-xs font-thin'>[{size}px X {size}px]</span>
               </div>
               <div className='flex justify-start items-start flex-col'>
                 <label htmlFor="">Foreground Color</label>
@@ -55,7 +56,7 @@ function App() {
                 <label htmlFor="" className='mr-2'>Margin</label>
                 <input 
                 type="number" 
-                className='focus:outline-none border border-gray-500 w-25 rounded-lg p-1 mr-2 w-20' 
+                className='focus:outline-none border border-gray-500 focus:border-orange-500 w-25 rounded-lg p-1 mr-2 w-20' 
                 maxLength={50} 
                 minLength={5} 
                 value={margin}
